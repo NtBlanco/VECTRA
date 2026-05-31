@@ -1,6 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
 import os
+from anthropic import Anthropic
 
 load_dotenv()
 
