@@ -7,3 +7,4 @@ pypdf
 PyPDF2
 Pillow
 anthropic
+python-dotenv
