@@ -1,13 +1,16 @@
-from anthropic import Anthropic
+import streamlit as st
 from dotenv import load_dotenv
-from prompts import PROMPT_SISTEMA
-
 import os
 
 load_dotenv()
 
+api_key = st.secrets.get(
+    "ANTHROPIC_API_KEY",
+    os.getenv("ANTHROPIC_API_KEY")
+)
+
 client = Anthropic(
-    api_key=os.getenv("ANTHROPIC_API_KEY")
+    api_key=api_key
 )
 
 def preguntar_ia(pregunta, contexto, tipo_consulta):
