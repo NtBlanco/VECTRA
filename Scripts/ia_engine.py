@@ -11,6 +11,8 @@ api_key = st.secrets.get(
     os.getenv("ANTHROPIC_API_KEY")
 )
 
+st.write("API encontrada:", api_key[:15] if api_key else "NO HAY API")
+
 client = Anthropic(
     api_key=api_key
 )
